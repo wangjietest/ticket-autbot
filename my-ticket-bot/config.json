@@ -1,0 +1,8 @@
+{
+    "driver_path": "F:\\Project\\ticket_autobot\\ref-project\\damaihelper\\chromedriver.exe",
+    "target_url": "https://m.damai.cn/shows/item.html?itemId=984168171424",
+    "sess": [1, 2],
+    "price": [1, 2, 3],
+    "ticket_num": 1,
+    "viewer_person": [1]
+}
