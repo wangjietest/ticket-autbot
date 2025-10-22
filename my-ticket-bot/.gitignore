@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+error.txt
+
+# IDE
+.vscode/
+.idea/
