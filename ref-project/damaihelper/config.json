@@ -28,9 +28,9 @@
         2,
         3
     ],
-    "driver_path": "E:\\Code\\damai\\refer-project\\damaihelper\\chromedriver.exe",
+    "driver_path": "F:\\Project\\ticket_autobot\\ref-project\\damaihelper\\chromedriver.exe",
     "damai_url": "https://www.damai.cn/",
-    "target_url": "https://m.damai.cn/damai/detail/item.html?itemId=714001339730",
+    "target_url": "https://m.damai.cn/shows/item.html?itemId=984168171424",
     "queue": {
         "zhoujielun_0403": "https://m.damai.cn/damai/detail/item.html?itemId=717235298514",
         "liu_dehua_0506": "https://m.damai.cn/damai/detail/item.html?itemId=719283457211"
