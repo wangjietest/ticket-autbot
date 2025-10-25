@@ -12,6 +12,10 @@ class SimpleTicketBot:
     def __init__(self, config):
         self.config = config
         self.driver = None
+
+        #初始化页面元素
+        self.reserve_button = None
+
     
     def init_browser(self):
         #配置chrome选项
@@ -33,6 +37,34 @@ class SimpleTicketBot:
             options=options
         )
         print("浏览器启动成功")
+
+    def find_element_by_config(self,element_name):
+        #根据配置中的元素定位方式查找元素
+
+        try:
+            selector_type, selector = self.config['elements'][element_name]
+
+            #判断定位方式
+            if selector_type == "xpath":
+                return self.driver.find_element(By.XPATH,selector)
+            else:
+                raise Exception(f"不支持的定位方式:{selector_type}")
+
+        except Exception as e:
+            print(f"查找元素 {element_name} 失败:{e}")
+            return None
+
+    def init_elements(self):
+
+        try:
+            self.reserve_button = self.find_element_by_config("reserve_button")
+            if self.reserve_button:
+                print("立即预定按钮初始化成功")
+            else:
+                print("立即预定按钮初始化失败")  
+
+        except Exception as e:
+            print(f"初始化页面元素失败: {e}")
 
     def login(self):
         #简单的登录方法
